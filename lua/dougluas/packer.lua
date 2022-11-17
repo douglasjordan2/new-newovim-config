@@ -209,11 +209,14 @@ return require('packer').startup(function(use)
           ['add'] = 'remove',
           ['plus'] = 'minus',
           ['black'] = 'white',
-          ['desktop'] = 'mobile',
           ['none'] = 'block',
           ['first'] = 'last',
-          ['desktop'] = 'mobile',
-          ['green'] = 'orange'
+          ['desktop-only'] = 'mobile-only',
+          ['green'] = 'orange',
+          ['margin'] = 'padding',
+          ['tablet'] = 'mobile',
+          ['in'] = 'out',
+          ['section'] = 'block'
         }
       })
       vim.keymap.set({ 'n', 'v' }, '<leader>cl', require('nvim-toggler').toggle)

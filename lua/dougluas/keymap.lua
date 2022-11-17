@@ -11,6 +11,7 @@ vim.opt.timeoutlen = 300
 
 -- map leader
 vim.g.mapleader = " "  ------------------------------------------------------------  set leader to SPACE
+map('i', '<C-c>', '<ESC>')  -------------------------------------------------------  escape with CTRL+C
 
 -- tabs
 map('n', '<leader>pt', 'gT')  -----------------------------------------------------  previous tab
@@ -20,11 +21,11 @@ map('n', '<leader>nt', 'gt')  --------------------------------------------------
 map('n', '<leader>fe', ':Neotree filesystem reveal right<CR>')  -------------------  open file explorer
 map('n', '<leader>fc', ':Neotree close<CR>')  -------------------------------------  close file explorer
 map('n', '<leader>t', ':Telescope<CR>')  ------------------------------------------  open telescope
-map('n', '<leader>ff', ':Telescope live_grep<CR>')  ------------------------------  fuzzy find
+map('n', '<leader>ff', ':Telescope live_grep<CR>')  -------------------------------  fuzzy find
 map('n', '<leader>b', ':Telescope buffers<CR>')  ----------------------------------  buffers
 
 -- open windows with CTRL + arrow keys
-map('n', '<leader><down>', '<C-w>s')  ---------------------------------------------------  open new window below
+map('n', '<leader><down>', '<C-w>s')  --------------------------------------------  open new window below
 map('n', '<leader><right>', '<C-w>v')  --------------------------------------------------  open new window right
 
 -- move around splits using arrow keys
@@ -40,14 +41,14 @@ map('n', '<leader>=', '<C-w>=')  -----------------------------------------------
 
 -- visual editor commands
 map('n', '<leader>c', ':noh<CR>')  ------------------------------------------------  clear highlighting
-map('n', '<leader><leader>', 'ciw')  ----------------------------------------------  replace word regardless of char position
+map('n', '<leader><Tab>', 'ddO')  -------------------------------------------------  fix indent when at first char of new line betweeen brackets (etc)
 
 -- file commands
 map('n', '<leader>s', ':w<CR>')  --------------------------------------------------  save
 map('n', '<leader>sa', ':wa<CR>')  ------------------------------------------------  save all
 map('n', '<leader>q', ':q<CR>')  --------------------------------------------------  quit
-map('n', '<leader>qa', ':qa<CR>')  ------------------------------------------------  quit all
-map('n', '<leader>sqa', ':wqa<CR>')  ----------------------------------------------  save all and quit
+map('n', '<leader>qq', ':qa<CR>')  ------------------------------------------------  quit all
+map('n', '<leader>sqq', ':wqa<CR>')  ----------------------------------------------  save all and quit
 map('n', '<leader>r', ':so %<CR>')  -----------------------------------------------  source
 
 -- terminal mappings
